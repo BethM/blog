@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_filter :authorize, only: [:edit, :update]
+
   # GET /articles
   # GET /articles.json
   def index
