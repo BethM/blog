@@ -1,0 +1,17 @@
+Blog::Application.routes.draw do
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
+  resources :users
+  resources :articles
+  resources :sessions
+
+  root :to => 'articles#index'
+<<<<<<< HEAD
+
+  # See how all your routes lay out with "rake routes"
+=======
+>>>>>>> [#40158945] User authentication part 1
+
+end
